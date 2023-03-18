@@ -1,0 +1,36 @@
+Title: Technical Documentation for JavaScript Code for Managing Personal Movie Data
+
+Introduction:
+The JavaScript code below has been created to manage users' personal movie data. It is written in a modular and easy-to-understand manner, allowing users to manage their personal movie collections.
+
+Code Description:
+const numberOfFilms = +prompt("Quanti film hai visto?");
+
+This is the first step in initializing the user's database. The prompt will ask the user to enter the number of movies they have seen.
+
+let personalMovieDB = {
+count : numberOfFilms,
+movies : {},
+actors : {},
+genres : [],
+privat : false,
+};
+
+This is the main object for the user's database. The personalMovieDB object contains the following properties:
+
+count: The number of movies the user has seen. This property receives the value entered by the user in the first prompt.
+movies: A database for movies. This is initialized with an empty object and will be filled in as the user inputs movie titles and ratings.
+actors: A database for actors. This is initialized with an empty object and will be filled in as the user inputs information.
+genres: A database for movie genres. This is initialized with an empty array and will be filled in as the user inputs information.
+privat: A boolean property indicating whether the database is private or not. This is initialized with a value of "false".
+let title_film = prompt("Qual è il titolo dell'ultimo film che hai visto?");
+let rating_film = +prompt("Da' un voto all'ultimo film che hai visto");
+
+These two lines of code prompt the user to input the title and rating of the last movie they watched. This is done through prompts that request this information and store them in the variables "title_film" and "rating_film".
+
+personalMovieDB.movies[title_film] = rating_film;
+
+This line of code adds the last movie watched to the user's database, by adding the title and rating to the "movies" property in the personalMovieDB object.
+
+Conclusion:
+This JavaScript code is a simple and efficient way to manage users' personal databases for the movies they have watched. It is easy to understand and use and can be adapted to users' needs.
